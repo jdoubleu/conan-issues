@@ -1,12 +1,15 @@
-#include "conanqmlbug.h"
-#include <vector>
-#include <string>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
-int main() {
-    conanqmlbug();
+int main(int argc, char** argv)
+{
+    QGuiApplication app(argc, argv);
 
-    std::vector<std::string> vec;
-    vec.push_back("test_package");
+    QQmlApplicationEngine engine;
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
+            &app, []() { QCoreApplication::exit(-1); },
+            Qt::QueuedConnection);
+    engine.loadFromModule("hello", "Main");
 
-    conanqmlbug_print_vector(vec);
+    return app.exec();
 }
