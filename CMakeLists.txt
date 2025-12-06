@@ -6,6 +6,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
 
+set(QT6_INSTALL_PREFIX "$ENV{QT_HOST_PATH}")
+set(QT6_INSTALL_QML "qml")
+
+qt_policy(set QTP0001 NEW)
+qt_policy(set QTP0004 NEW)
+
 qt_standard_project_setup()
 
 qt_add_executable(helloworld
