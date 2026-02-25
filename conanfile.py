@@ -7,7 +7,8 @@ class ConanQmlBugRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
 
     def requirements(self):
-        self.requires("qt/6.8.3", options={
+        self.requires("qt/6.11.1", options={
+            'shared': True,
             # qt quick/qml
             'qtdeclarative': True,
             'qtshadertools': True
