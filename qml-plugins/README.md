@@ -1,5 +1,5 @@
 # Conan + Qt (Quick) issues
-This repository is meant to reproduce issues with the Qt (Quick) recipes from Conan, as well as explore possible fixes.
+This project is meant to reproduce issues with the Qt (Quick) recipes from Conan, as well as explore possible fixes.
 
 ## Reproduce current issue
 Simply run the following commands, as you would do with every Conan + CMake project:
