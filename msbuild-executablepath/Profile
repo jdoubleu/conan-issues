@@ -1,0 +1,10 @@
+# Conan build profile
+include(default)
+
+[settings]
+build_type=Debug
+
+[tool_requires]
+# force override CMake versions (see https://github.com/conan-io/conan-center-index/issues/26878)
+# CMake 4.2 added support for VS2026 (https://cmake.org/cmake/help/latest/generator/Visual%20Studio%2018%202026.html)
+!cmake/*: cmake/[>=4.2]
