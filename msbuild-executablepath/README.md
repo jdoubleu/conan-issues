@@ -11,3 +11,6 @@ You may have to clear your local conan cache, to force some dependencies to be r
 ```sh
 conan remove --confirm '*:*'
 ```
+
+## Solution
+The `conandeps.props` needs to imported _after_ the Toolchain's CppProps property sheet.
