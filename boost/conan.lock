@@ -1,0 +1,13 @@
+{
+    "version": "0.5",
+    "requires": [
+        "zlib/1.3.1#b8bc2603263cf7eccbd6e17e66b0ed76%1733936244.862",
+        "bzip2/1.0.8#c470882369c2d95c5c77e970c0c7e321%1762886692.465",
+        "boost/1.91.0#857a04e51881582791677311c881b00d%1790854183.122"
+    ],
+    "build_requires": [
+        "b2/5.6.1#41ae5699a0588de1202afe5b675cc86d%1793034698.727"
+    ],
+    "python_requires": [],
+    "config_requires": []
+}
